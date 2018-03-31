@@ -56,7 +56,6 @@ namespace Test
                     }
                     studentContainer.Add(counter + ". " + lastName + ", " + firstName + " - " + GPA);
                     counter++;
-                    Enlist(firstName, lastName, GPA);
                 }
                 else if (userInput == "DISPLAY")
                 {
@@ -64,16 +63,14 @@ namespace Test
                     studentContainer.Sort();
                     studentContainer.ForEach(Console.WriteLine);
                     n = 1;
+                    Console.WriteLine("Press enter to close...");
+                    Console.ReadLine();
                 }
                 else
                 {
                     Console.WriteLine("\nOperation non-existing, please use appropriate operation");
                 }
             }
-        }
-        public static void Enlist(string x, string y, string z)
-        {
-            Console.WriteLine("\nNew student enlisted: " + x + " " + y + " " + z);
         }
     }
 }
